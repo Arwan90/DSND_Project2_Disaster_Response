@@ -39,29 +39,29 @@ messages & categories | The datasets were provided by Figure 8 company.
 
 #### Libraries and Tools used
 <a name="tools"/>
-##### Jupyter Nootebook
+1. <b>Jupyter Nootebook</b>
 * Python Version: 3.6.5
 * Pandas Version: 0.23.0
 * NLP Library: NLTK
 * ML Libraries: NumPy, SciPy, Pandas, Sciki-Learn
 * SQLlite Database Library: SQLalchemy
 * Data Visualization: Flask, Plotly
-##### Udacity IDE
+2. <b>Udacity IDE</b>
 
 
 #### Useful information: 
 <a name="info"/>
-###### Web App Link :  https://view6914b2f4-3001.udacity-student-workspaces.com/
++ <b>Web App Link</b> :  https://view6914b2f4-3001.udacity-student-workspaces.com/
 
 
 #### Program Execution Process :
 <a name="exe"/>
 To create the database, train and save the model, follow these instructions: 
-    1. To run ETL pipeline for data cleaning and saving: 
-     ( python process_data.py disaster_messages.csv disaster_categories.csv Disaster_Response.db )
-    2. To run the ML pipeline for data loading for Database, training the model (classifier), and exporting the classifier as a pickle file: 
-    ( python train_classifier.py ../data/Disaster_Response.db classifier.pkl )
-    3. in order to run the web app, you must run the (run.py) file. 
+1. To run ETL pipeline for data cleaning and saving: 
+ ( python process_data.py disaster_messages.csv disaster_categories.csv Disaster_Response.db )
+2. To run the ML pipeline for data loading for Database, training the model (classifier), and exporting the classifier as a pickle file: 
+( python train_classifier.py ../data/Disaster_Response.db classifier.pkl )
+3. in order to run the web app, you must run the (run.py) file. 
     
     Then visit this link : (https://view6914b2f4-3001.udacity-student-workspaces.com/).
 
