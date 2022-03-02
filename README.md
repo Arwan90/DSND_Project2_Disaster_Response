@@ -4,7 +4,6 @@
 
 #### Table of contents
 * General Information
-* The file Structure of the project
 * Files available
 * Dataset used
 * Tools used
@@ -17,35 +16,19 @@ In this project, two datasets were cleaned, combined, and processed. The resulte
 The Machine Learning Pipeline went through a tuning process using GridSearchCV.
 The final result is a web app that takes messages as input, analyzes them using the tuned ML Pipeline, and categorizes the message according to 36 available categories.
 
-#### The file structure of the project
-
-- app
-| - template
-| |- master.html  # main page of web app
-| |- go.html  # classification result page of web app
-|- run.py  # Flask file that runs app
-
-- data
-|- disaster_categories.csv  # data to process 
-|- disaster_messages.csv  # data to process
-|- process_data.py
-|- InsertDatabaseName.db   # database to save clean data to
-
-- models
-|- train_classifier.py
-|- classifier.pkl  # saved model 
-
-- README.md
-
-
 #### Files available
-* A messages Dataset (From Figure 8 company) : 26248 Records x 4 Columns
-* A categories Dataset (From Figure 8 company) : 26248 Records x 2 Columns
+* A message Dataset (messages.csv | From Figure 8 company) : 26248 Records x 4 Columns
+* A categories Dataset (categories.csv | From Figure 8 company) : 26248 Records x 2 Columns
+* A Python file for data processing (process_data.py)
+* A resulted database that contains the cleaned table (Disaster_Response.db) with a Disaster_Response table.
+* A python file that has the Machine Learning Pipeline (train_classifier.py).
+* A pickle file that has the tuned ML Pipeline (classifier.pkl).
+* A python file for rendring the web app pages (run.py).
+* Two html files for formatting the web app pages (go.html | master.html).
 * ReadMe file
-* Jupyter notebook file (.ipynb)
 
 #### Dataset used
-Seattle Airbnb | The dataset was retrieved from Kaggle (https://www.kaggle.com/airbnb/seattle)
+messages & categories | The datasets were provided by Figure 8 company.
 
 #### Tools used
 ##### Jupyter Notebook
