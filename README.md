@@ -4,16 +4,21 @@
 
 #### Table of contents
 * 
-* [General Information](#General Information)
+* General Information
 * Files available
 * Dataset used
 * Tools used
 * Acknowledgment 
 * Resources
 
-  
-   
-<a name="General Information"/>
+##### Table of Contents  
+[Headers](#headers)  
+...... 
+<a name="headers"/>
+## Headers
+
+
+
 #### General Information
 
 In this project, two datasets were cleaned, combined, and processed. The resulted dataset was used to train a machine learning pipeline.
