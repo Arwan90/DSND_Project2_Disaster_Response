@@ -62,11 +62,11 @@ To create the database, train, and save the model, follow these instructions:
 
 1. To run ETL pipeline for data cleaning and saving: 
 
- ( python process_data.py disaster_messages.csv disaster_categories.csv Disaster_Response.db )
+  python process_data.py disaster_messages.csv disaster_categories.csv Disaster_Response.db
  
 2. To run the ML pipeline for data loading for the Database, training the model (classifier), and exporting the classifier as a pickle file: 
 
-( python train_classifier.py ../data/Disaster_Response.db classifier.pkl )
+  python train_classifier.py ../data/Disaster_Response.db classifier.pkl
 
 3. in order to run the web app, you must run the (run.py) file. 
     
