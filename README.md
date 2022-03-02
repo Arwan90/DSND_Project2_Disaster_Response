@@ -11,8 +11,8 @@
 * Resources
 
 
-<a name="general"/>
-#### General Information
+
+<a name="general"/> #### General Information
 
 In this project, two datasets were cleaned, combined, and processed. The resulted dataset was used to train a machine learning pipeline.
 The Machine Learning Pipeline went through a tuning process using GridSearchCV.
@@ -20,6 +20,7 @@ The final result is a web app that takes messages as input, analyzes them using 
 
 <a name="files"/>
 #### Files available
+
 * A message Dataset (messages.csv | From Figure 8 company) : 26248 Records x 4 Columns
 * A categories Dataset (categories.csv | From Figure 8 company) : 26248 Records x 2 Columns
 * A Python file for data processing (process_data.py)
