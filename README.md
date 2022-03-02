@@ -3,7 +3,7 @@
 #### +----------> This Project is dedicated for the Data Scientist Nano Degree | Udacity <----------+
 
 #### Table of contents
-* [General Information](#generalinformation)
+* [General Information](#general)
 * Files available
 * Dataset used
 * Tools used
@@ -17,8 +17,8 @@
 ## Headers
 
 
-<a name="generalinformation"/>
-#### General Information
+<a name="general"/>
+General Information
 
 In this project, two datasets were cleaned, combined, and processed. The resulted dataset was used to train a machine learning pipeline.
 The Machine Learning Pipeline went through a tuning process using GridSearchCV.
