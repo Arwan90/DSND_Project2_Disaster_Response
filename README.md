@@ -5,21 +5,23 @@
 #### Table of contents
 * [General Information](#general)
 * [Files available](#files)
-* Dataset used
-* Tools used
-* Acknowledgment 
-* Resources
+* [Dataset used](#data)
+* [Tools used](#tools)
+* [Useful information](#info)
+* [Program Execution Process](#exe)
+* [Acknowledgment](#ack)
 
 
-
-<a name="general"/> #### General Information
+#### General Information
+<a name="general"/> 
 
 In this project, two datasets were cleaned, combined, and processed. The resulted dataset was used to train a machine learning pipeline.
 The Machine Learning Pipeline went through a tuning process using GridSearchCV.
 The final result is a web app that takes messages as input, analyzes them using the tuned ML Pipeline, and categorizes the message according to 36 available categories.
 
-<a name="files"/>
+
 #### Files available
+<a name="files"/>
 
 * A message Dataset (messages.csv | From Figure 8 company) : 26248 Records x 4 Columns
 * A categories Dataset (categories.csv | From Figure 8 company) : 26248 Records x 2 Columns
@@ -32,9 +34,11 @@ The final result is a web app that takes messages as input, analyzes them using 
 * ReadMe file
 
 #### Dataset used
+<a name="data"/>
 messages & categories | The datasets were provided by Figure 8 company.
 
 #### Libraries and Tools used
+<a name="tools"/>
 ##### Jupyter Nootebook
 * Python Version: 3.6.5
 * Pandas Version: 0.23.0
@@ -46,10 +50,12 @@ messages & categories | The datasets were provided by Figure 8 company.
 
 
 #### Useful information: 
+<a name="info"/>
 ###### Web App Link :  https://view6914b2f4-3001.udacity-student-workspaces.com/
 
 
 #### Program Execution Process :
+<a name="exe"/>
 To create the database, train and save the model, follow these instructions: 
     1. To run ETL pipeline for data cleaning and saving: 
      ( python process_data.py disaster_messages.csv disaster_categories.csv Disaster_Response.db )
@@ -60,7 +66,8 @@ To create the database, train and save the model, follow these instructions:
     Then visit this link : (https://view6914b2f4-3001.udacity-student-workspaces.com/).
 
 
-#### Acknowledgment 
+#### Acknowledgment
+<a name="ack"/>
 A special thanks to Udacity and Misk Academy for giving me the opportunity to learn, explore and use some data science-related skills.
 Also, the appreciation goes to Fifure 8 company for offering the dataset.
 Thanks to our mentor Mr. Haroon.
