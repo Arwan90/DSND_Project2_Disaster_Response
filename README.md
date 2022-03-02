@@ -4,26 +4,21 @@
 
 #### Table of contents
 * [General Information](#general)
-* Files available
+* [Files available](#files)
 * Dataset used
 * Tools used
 * Acknowledgment 
 * Resources
 
-##### Table of Contents  
-[Headers](#headers)  
-...... 
-<a name="headers"/>
-## Headers
-
 
 <a name="general"/>
-General Information
+#### General Information
 
 In this project, two datasets were cleaned, combined, and processed. The resulted dataset was used to train a machine learning pipeline.
 The Machine Learning Pipeline went through a tuning process using GridSearchCV.
 The final result is a web app that takes messages as input, analyzes them using the tuned ML Pipeline, and categorizes the message according to 36 available categories.
 
+<a name="files"/>
 #### Files available
 * A message Dataset (messages.csv | From Figure 8 company) : 26248 Records x 4 Columns
 * A categories Dataset (categories.csv | From Figure 8 company) : 26248 Records x 2 Columns
