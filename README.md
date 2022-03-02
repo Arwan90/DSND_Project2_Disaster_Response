@@ -3,8 +3,7 @@
 #### +----------> This Project is dedicated for the Data Scientist Nano Degree | Udacity <----------+
 
 #### Table of contents
-* 
-* General Information
+* [General Information](#generalinformation)
 * Files available
 * Dataset used
 * Tools used
@@ -18,7 +17,7 @@
 ## Headers
 
 
-
+<a name="generalinformation"/>
 #### General Information
 
 In this project, two datasets were cleaned, combined, and processed. The resulted dataset was used to train a machine learning pipeline.
