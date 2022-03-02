@@ -7,7 +7,6 @@
 * Files available
 * Dataset used
 * Tools used
-* Findings
 * Acknowledgment 
 * Resources
 
@@ -30,25 +29,31 @@ The final result is a web app that takes messages as input, analyzes them using 
 #### Dataset used
 messages & categories | The datasets were provided by Figure 8 company.
 
-#### Tools used
-##### Jupyter Notebook
+#### Libraries and Tools used
+##### Jupyter Nootebook
 * Python Version: 3.6.5
 * Pandas Version: 0.23.0
+* NLP Library: NLTK
+* ML Libraries: NumPy, SciPy, Pandas, Sciki-Learn
+* SQLlite Database Library: SQLalchemy
+* Data Visualization: Flask, Plotly
+##### Udacity IDE
 
-##### Python Libraries Used
-* pandas 
-* matplotlib
-* seaborn
 
-#### Findings
+#### Useful information: 
+###### Web App Link :  https://view6914b2f4-3001.udacity-student-workspaces.com/
+###### in order to run the web app, you must run the (run.py) file. 
 
-After analyzing Seattle Airbnb Dataset and imposing three business questions, we can say that downtown got the highest renting price compared to other neighborhoods. We also can conclude that having more guests included in renting process will increase the total renting price. On the other hand, not verifying an Airbnb account with a phone number or a profile picture might be a factor in increasing renting prices by hosts.
+[#### Program Execution Process :]
+To create the database, train and save the model, follow these instructions: 
+1. To run ETL pipeline to clean data and store the processed data in the database: 
+ ( python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/disaster_response_db.db)
+To run the ML pipeline that loads data from DB, trains classifier and saves the classifier as a pickle file python models/train_classifier.py data/disaster_response_db.db models/classifier.pkl
+Run the following command in the app's directory to run your web app. python run.py
+
+Go to http://0.0.0.0:3001/
 
 #### Acknowledgment 
-A big thanks to Udacity and Misk Academy for giving me the opportunity to learn, explore and use some data science-related skills.
-Also, the appreciation goes to kaggle for offering the dataset.
-
-
-#### Useful Resources
-###### Project Link :  https://github.com/Arwan90/DSND_Project1_Seattle_AirBnB.git
-###### Medium blog for the project : https://medium.com/@rawanalmakinah/analyzing-seattle-airbnb-dataset-using-python-libraries-5b8dd1801fe3
+A special thanks to Udacity and Misk Academy for giving me the opportunity to learn, explore and use some data science-related skills.
+Also, the appreciation goes to Fifure 8 company for offering the dataset.
+Thanks to our mentor Mr. Haroon.
