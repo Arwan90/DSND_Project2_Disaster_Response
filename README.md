@@ -52,7 +52,7 @@ data
 
 |- process_data.py
 
-|- InsertDatabaseName.db # database to save clean data to
+|- Disaster_Response.db # database to save clean data to
 
 models
 
