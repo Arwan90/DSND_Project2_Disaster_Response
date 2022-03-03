@@ -18,6 +18,7 @@
 In this project, two datasets were cleaned, combined, and processed. The resulted dataset was used to train a machine learning pipeline.
 The Machine Learning Pipeline went through a tuning process using GridSearchCV.
 The final result is a web app that takes messages as input, analyzes them using the tuned ML Pipeline, and categorizes the message according to 36 available categories.
+This web app is helpful for organizations that work in a disaster/response field. It will facilitate categorizing the received messages and direct the message to the category-related organization.
 
 
 #### Files available
@@ -32,6 +33,35 @@ The final result is a web app that takes messages as input, analyzes them using 
 * A python file for rendering the web app pages (run.py).
 * Two HTML files for formatting the web app pages (go.html | master.html).
 * ReadMe file
+
+app
+
+| - template
+
+| |- master.html # main page of web app
+
+| |- go.html # classification result page of web app
+
+|- run.py # Flask file that runs app
+
+data
+
+|- disaster_categories.csv # data to process
+
+|- disaster_messages.csv # data to process
+
+|- process_data.py
+
+|- InsertDatabaseName.db # database to save clean data to
+
+models
+
+|- train_classifier.py
+
+|- classifier.pkl # saved model
+
+README.md
+
 
 #### Dataset used
 <a name="data"/>
