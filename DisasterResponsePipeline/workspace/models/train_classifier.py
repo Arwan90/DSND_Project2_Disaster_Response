@@ -36,6 +36,11 @@ from sklearn.metrics import make_scorer
 
 def load_data(database_filepath):
     
+    '''
+    INPUT: sql database file
+    OUTPUT: x and y values for the model
+    '''
+    
     path = 'sqlite:///' + database_filepath 
     df = pd.read_sql('Disaster_Response', path)
     
@@ -52,6 +57,10 @@ def load_data(database_filepath):
 
 
 def tokenize(text):
+    '''
+    INPUT: Text
+    OUTPUT: cleaned tokens (no stopwords, lemmitized words with lower letters)
+    '''
     text = re.sub(r"[^a-zA-Z]"," ",text.lower())
     words = word_tokenize(text)
     lemm = [WordNetLemmatizer().lemmatize(w) for w in words if w not in stopwords.words('english') ]
@@ -59,6 +68,9 @@ def tokenize(text):
 
 
 def build_model():
+    '''
+    OUTPUT: a model pipeline
+    '''
     pipeline = Pipeline([
         ('features', FeatureUnion([
 
@@ -75,11 +87,19 @@ def build_model():
 
 
 def evaluate_model(model, X_test, Y_test, Y):
+    '''
+    INPUT: The model pipeline and the X_test, Y_test Values (This split done in the main function)
+    OUTPUT: the accuracy of the predecetd messages
+    '''
     predicted = model.predict(X_test)
     print(classification_report(Y_test.iloc[:,1:].values, np.array([x[1:] for x in predicted]), 
                                 target_names=Y.columns))
         
 def tuning_model(model, X_train, Y_train, Y_test):
+    '''
+    INPUT: model pipeline
+    OUTPUT: A tuned model bu using GridSearchCV
+    '''
     
     parameters = {'classifier__estimator__learning_rate': [0.01, 0.02, 0.05],
               'classifier__estimator__n_estimators': [10, 20, 40]}
@@ -91,6 +111,10 @@ def tuning_model(model, X_train, Y_train, Y_test):
     return grid_obj
 
 def save_model(tuned_model, model_filepath):
+    '''
+    INPUT: the tuned model
+    OUTPUT: a pickile file which is the classifier
+    '''
   
     filename = 'classifier.pkl'
     pickle.dump(tuned_model, open(filename, 'wb'))
