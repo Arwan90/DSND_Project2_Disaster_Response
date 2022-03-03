@@ -5,22 +5,32 @@ import sqlite3
 
 
 def load_data(messages_filepath, categories_filepath):
+    '''
+    INPUT: two datasets, Messages and Categories.
+    OUTPUT: a merged file that has the two datasets. A coomon column is ID.
+    '''
     messages = pd.read_csv('/home/workspace/data/disaster_messages.csv')
     categories = pd.read_csv('/home/workspace/data/disaster_categories.csv')
-    #merging the two datasets
+  
     data = pd.merge(messages, categories)
     return data
 
 
 def clean_data(data):
-    #Creating multiple categories columns out of the original category column
+    '''
+    INPUT: the Murged dataset from load_Data function.
+    OUTPUT: a clean dataset that has new category columns and only useful columns
+    PROCESS: 
+    1. categories column was splitted to multiple (36) columns based on the values provided.
+    2. the new columns were given a new heading by using the first row values after being cleaned.
+    3. the 36 columns values were converted to binary values by removing the text from it.
+    4. the categories columns were appended to he original dataset
+    5. unnecessary columns were dropped (original)..
+    '''
     categories = data['categories'].str.split(pat=';', n=0, expand=True)
-    
-    #creating headings for the created categories
-    #assigning the first record to a variable
+  
     row = categories.head(1)
     
-    # removing any values from the headings excpet the category name itself
     category_colnames = []
     for i in row:
         category_colnames.append(str(row.loc[0,i])[slice(-2)])
@@ -56,6 +66,10 @@ def clean_data(data):
 
 
 def save_data(df, database_filename):
+    '''
+    INPUT: dataframe
+    OUTPUT: an sql database file
+    '''
     #Saving the clean dataset into an sqlite database
     engine = create_engine('sqlite:///Disaster_Response.db')
     df.to_sql('Disaster_Response', engine, if_exists='replace', index=False)  
